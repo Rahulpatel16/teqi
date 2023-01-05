@@ -1,0 +1,291 @@
+<html>
+    <head>
+        <title>Welcome Sir !</title>
+        <link rel="stylesheet" href="./CSS/Skill.css">
+        <link href='https://fonts.googleapis.com/css?family=Fugaz One' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Birthstone' rel='stylesheet'>
+        <link rel="icon" type="png" href="./Image/logo.png" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+
+        <script>
+            function updateDonutChart (el, percent, donut) {
+    percent = Math.round(percent);
+    if (percent > 100) {
+        percent = 100;
+    } else if (percent < 0) {
+        percent = 0;
+    }
+    var deg = Math.round(360 * (percent / 100));
+
+    if (percent > 50) {
+        $(el + ' .pie').css('clip', 'rect(auto, auto, auto, auto)');
+        $(el + ' .right-side').css('transform', 'rotate(180deg)');
+    } else {
+        $(el + ' .pie').css('clip', 'rect(0, 1em, 1em, 0.5em)');
+        $(el + ' .right-side').css('transform', 'rotate(0deg)');
+    }
+    if (donut) {
+        $(el + ' .right-side').css('border-width', '0.1em');
+        $(el + ' .left-side').css('border-width', '0.1em');
+        $(el + ' .shadow').css('border-width', '0.1em');
+    } else {
+        $(el + ' .right-side').css('border-width', '0.5em');
+        $(el + ' .left-side').css('border-width', '0.5em');
+        $(el + ' .shadow').css('border-width', '0.5em');
+    }
+    $(el + ' .num').text(percent);
+    $(el + ' .left-side').css('transform', 'rotate(' + deg + 'deg)');
+}
+
+// Pass in a number for the percent
+updateDonutChart('#specificChart', 66.67, true);
+
+        </script>
+    <body>
+        <script src="main_file.js"></script>
+        <script src="./JavaScript/Script.js"  type="text/javascript"></script>
+        <div class="Nav_Con">
+            <div class="logo_con">
+                <img src="./Image/logo.png" width="70px">
+            </div>
+            <div class="nav_Ele_con">
+                <div class="home_con">
+                    <p class="home" style="color: #D80081;"><a style=" text-decoration: none;color: #fff;" href="index.html">Home</a></p>
+                </div>
+                <div>
+                   <p class="Projects"> <a href="project.html" style=" text-decoration: none; color: #fff;"> Projects</a></p>
+                </div>
+                <div>
+                    <p class="AboutMe"><a style=" text-decoration: none;color: #fff;" href="About.html">About Me</a></p>
+                </div>
+                <div>
+                    <p class="Contact"><a style=" text-decoration: none;color: #D80081;" href="Skill.html">Skills</a></p>
+                </div>
+            </div>
+            <div class="nav_ele_btn_con">
+                <img src="./Icon/icons8-menu-rounded-100.png"  width="40px">
+            </div>
+            <div class="Nav_bt_after">
+                <img src="./Icon/icons8-multiply-90.png"  width="40px">
+            </div>
+            <div class="nav_Ele_con_after">
+                <div class="home">
+                    <p ><a style=" text-decoration: none;color: #fff;" href="index.html">Home</a></p>
+                </div>
+                <div class="Projects">
+                    <p class="Projects"><a href="project.html" style=" text-decoration: none; color: #fff;"> Projects</a></p>
+                </div>
+                <div class="Contact">
+                    <p ><a style=" text-decoration: none;color: #D80081; margin-left: 25px;" href="Skill.html">Skills</a></p>
+                </div>
+                <div class="AboutMe">
+                    <p ><a style=" text-decoration: none;color: #fff;" href="About.html">About Me</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="All_con">
+            <div class="Element_con">
+                <div class="bar_con">
+                    <div class="row py-2" style="margin:20px;margin-top: 40px;">
+                        <p style="position:absolute; font-size: 40px;margin-top:65px;margin-left: 60px;z-index:-1;">70%</p>
+                        <div class="col-md-4 py-1">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <canvas id="chDonut1"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="position:absolute; font-size: 25px;margin-top:10px;margin-left: 40px;z-index:-1;">Front End</p>
+                    </div>
+                    <div class="row py-2" style="margin:20px;margin-top: 40px;">
+                        <p style="position:absolute; font-size: 40px;margin-top:65px;margin-left: 60px;z-index:-1;">80%</p>
+                        <div class="col-md-4 py-1">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <canvas id="chDonut2"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="position:absolute; font-size: 25px;margin-top:10px;margin-left: 40px;z-index:-1;">Back End</p>
+                    </div>
+                    <div class="row py-2" style="margin:20px;margin-top: 40px;">
+                        <p style="position:absolute; font-size: 40px;margin-top:65px;margin-left: 60px;z-index:-1;">75%</p>
+                        <div class="col-md-4 py-1">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <canvas id="chDonut3"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="position:absolute; font-size: 25px;margin-top:10px;margin-left: 60px;z-index:-1;">MySQL</p>
+
+                    </div>
+                    <div class="row py-2" style="margin:20px;margin-top: 40px;">
+                        <p style="position:absolute; font-size: 40px;margin-top:65px;margin-left: 60px;z-index:-1;">65%</p>
+                        <div class="col-md-4 py-1">
+                            <div class="card" style="width: 12rem;">
+                                <div class="card-body">
+                                    <canvas id="chDonut4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="position:absolute; font-size: 25px;margin-top:10px;margin-left: 65px;z-index:-1;">Python</p>
+
+                    </div>
+                </div>
+                <div class="SkillDetailsCon">
+                    <div class="SkillsElement">
+                        <h2>Languages Knows</h2>
+                        <ol style="list-style: circle;color: #D80081;">
+                            <li><p style="color: white;">C</p></li>
+                            <li><p style="color: white;">C++</p></li>
+                            <li><p style="color: white;">Advanced JAVA</p></li>
+                            <li><p style="color: white;">Angular</p></li>
+                            <li><p style="color: white;">XML</p></li>
+                        </ol>
+                    </div>
+                    <div class="Certi_Con">
+                        <h2>Certificates</h2>
+                        <ol style="list-style: circle;color: #D80081;">
+                            <li><p style="color: white;">Python certification from Perfect eLearning</p></li>
+                            <li><p style="color: white;">Recognized as 'Certified Information Security and Ethical Hacker' from Pristine Infosolutions Pvt Ltd.</p></li>
+                            <li><p style="color: white;">Appreciation certificate for active participation at Student Start-up and Innovation Policy - Hackathon.</p></li>
+                            <li><p style="color: white;">NDG Linux unhatched coerce from  CISCO Networking Academy. </p></li>
+                            
+                        </ol>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        
+        <script>
+        /* chart.js chart examples */
+        
+        // chart colors
+        var colors = ['#9747FF','#BABABA','#333333','#c3e6cb','#dc3545','#6c757d'];
+        
+        var colors_1 = ['#01BBDC','#BABABA'];
+        /* bar chart */
+        var chBar = document.getElementById("chBar");
+        if (chBar) {
+          new Chart(chBar, {
+          type: 'bar',
+          data: {
+            labels: ["S", "M", "T", "W", "T", "F", "S"],
+            datasets: [{
+              data: [589, 445, 483, 503, 689, 692, 634],
+              backgroundColor: colors[0]
+            },
+            {
+              data: [639, 465, 493, 478, 589, 632, 674],
+              backgroundColor: colors[1]
+            }]
+          },
+          options: {
+            legend: {
+              display: false
+            },
+            scales: {
+              xAxes: [{
+                barPercentage: 0.4,
+                categoryPercentage: 0.5
+              }]
+            }
+          }
+          });
+        }
+        
+        /* 3 donut charts */
+        var donutOptions = {
+          cutoutPercentage: 70,
+          legend: {position:'bottom', padding:5, labels: {pointStyle:'circle', usePointStyle:true}}
+        };
+        
+        // donut 1
+        var chDonutData1 = {
+            datasets: [
+              {
+                backgroundColor: colors.slice(0,3),
+                borderWidth: 0,
+                data: [70,30]
+              }
+            ]
+        };
+        
+        var chDonut1 = document.getElementById("chDonut1");
+        if (chDonut1) {
+          new Chart(chDonut1, {
+              type: 'pie',
+              data: chDonutData1,
+              options: donutOptions
+          });
+        }
+
+        // donut 2
+        var chDonutData2 = {
+            datasets: [
+              {
+                backgroundColor: colors_1.slice(0,3),
+                borderWidth: 0,
+                data: [80,20]
+              }
+            ]
+        };
+        
+        var chDonut2 = document.getElementById("chDonut2");
+        if (chDonut2) {
+          new Chart(chDonut2, {
+              type: 'pie',
+              data: chDonutData2,
+              options: donutOptions
+          });
+        }
+        
+        // donut 3
+        var chDonutData3 = {
+            datasets: [
+              {
+                backgroundColor: colors.slice(0,3),
+                borderWidth: 0,
+                data: [75,25]
+              }
+            ]
+        };
+        
+        var chDonut3 = document.getElementById("chDonut3");
+        if (chDonut3) {
+          new Chart(chDonut3, {
+              type: 'pie',
+              data: chDonutData3,
+              options: donutOptions
+          });
+        }
+        
+        // donut 4
+        var chDonutData4 = {
+            datasets: [
+              {
+                backgroundColor: colors_1.slice(0,3),
+                borderWidth: 0,
+                data: [65,35]
+              }
+            ]
+        };
+        
+        var chDonut4 = document.getElementById("chDonut4");
+        if (chDonut4) {
+          new Chart(chDonut4, {
+              type: 'pie',
+              data: chDonutData4,
+              options: donutOptions
+          });
+        }
+        
+        </script>    
+</body>
+</html>

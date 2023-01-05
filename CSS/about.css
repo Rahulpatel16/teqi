@@ -1,0 +1,362 @@
+body
+    {
+        background-position:top;
+        background: url("../Image/Background.jpg");
+        background-size: 100%;
+        color: #ffff;
+        background-attachment: fixed;
+    }
+
+    
+    .nav_Ele_con
+    {
+        position: absolute;
+        right: 50px;
+        top: 0;
+        font-style: normal;
+        font-family: 'Inter', sans-serif; 
+        font-weight: 700;
+        font-size: 25px;
+        line-height: 30px;
+        display: flex;
+    }
+
+    .nav_Ele_con div 
+    {
+        padding-right: 50px;
+        cursor: pointer;
+        transition: 0.2s;
+        
+    }
+
+    
+
+    .nav_Ele_con p:hover
+    {
+        color: #D80081; 
+        border-bottom: 3px solid #D80081;
+        transition-timing-function:ease-in-out;
+        transform-style: preserve-3d;
+    }
+    .nav_ele_btn_con
+    {
+        display: none;
+        right: 10px;
+        top: 10px;
+        position: absolute;
+
+    }
+
+    .nav_Ele_con_after
+    {
+        display: none;
+        position: absolute;
+        background: #000000c5;
+    backdrop-filter: blur(2px);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        font-style: normal;
+        font-family: 'Inter', sans-serif; 
+        font-weight: 700;
+        font-size: 35px;
+        line-height: 30px;
+    }
+
+
+    .nav_Ele_con_after .home
+    {
+        width: 98px;
+        margin-top: 70px;
+        margin-left: 10%;
+    }
+
+    .nav_Ele_con_after .Projects
+    {
+        width: 140px;
+        margin-left: 23%;
+        margin-top: 70px;
+    }
+
+
+    .nav_Ele_con_after .Contact
+    {
+        width: 135px;
+        margin-left: 36%;
+        margin-top: 70px;
+    }
+
+    .nav_Ele_con_after .AboutMe
+    {
+        width: 160px;
+        margin-left: 49%;
+        margin-top: 70px;
+    }
+
+    .Nav_bt_after
+    {
+        right: 10px;
+        top: 10px;
+        position: absolute;
+        z-index: 10;
+    }
+
+    .nav_Ele_con_after p:hover
+    {
+        color: #D80081; 
+        border-bottom: 3px solid #D80081;
+        transition-timing-function:ease-in-out;
+        transform-style: preserve-3d;
+    }
+
+
+    @media only screen and (max-width: 750px)
+    {
+        .nav_Ele_con
+        {
+            display: none;
+        }
+        
+        .nav_ele_btn_con
+        {
+            display: block;
+        }
+    }
+
+    .Main_Con
+    {
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .Element_Con
+    {
+        background: rgba(0, 0, 0, 0.59);
+        width: 95%;
+        margin-top: 50px;
+        border: 2px solid #01BBDC;
+        box-shadow: 5px 5px 11px 4px #D9007F;
+        border-radius: 18px;
+        display: flex;
+        justify-content: center;
+    }
+    .Img_Name_con
+    {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .img_Ele_con
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .img_con
+    {
+         border-radius: 50%;
+         height: 270px;
+         width: 270px;
+         overflow: hidden;
+    }
+    .img_con img
+    {
+        margin-left: -50px;
+    }
+
+    .Img_Name_con p
+    {
+        font-family: 'Inter', sans-serif; 
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        color: #7A7A7A;
+        margin-top: -40px;
+    }
+
+    .Img_Name_con h1
+    {
+        font-family: 'Kadwa';
+        margin-top: 0px;
+    }
+
+    .icon_con
+    {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .insta_1
+    {
+        margin-top: -25px;
+        
+        cursor: pointer;
+    }
+
+    .insta_2
+    {
+        margin-top: -40px;
+        
+        display: none;   
+    }
+
+
+    .insta_1:hover .insta_2 
+    {
+        display: block;
+    }
+
+    .Icon_inside_con
+    {
+        margin-top: -23px;
+        display: flex;
+    }
+
+    .twitter_1
+    {
+        margin-top: -25px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .twitter_2
+    {
+        margin-top: -58px;
+        margin-left: 15px;
+        display: none;
+    }
+
+    .twitter_1:hover .twitter_2 
+    {
+        display: block;
+    }
+
+    .whatsapp_1
+    {
+        margin-top: -25px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .whatsapp_2
+    {
+        margin-top: -39px;
+        margin-left: 30px;
+        display: none;
+    }
+
+    .whatsapp_1:hover .whatsapp_2 
+    {
+        display: block;
+    }
+
+    .facebook_1
+    {
+        margin-top: -25px;
+        margin-left: 30px;
+        cursor: pointer;
+    }
+
+    .facebook_2
+    {
+        margin-top: -40px;
+        margin-left: 30px;
+        display: none;
+    }
+
+    .facebook_1:hover .facebook_2
+    {
+        display: block;
+    }
+
+    .Personal_Det_Con
+    {
+        text-align: left;
+        font-size: 20px;
+        
+        align-items: center;
+    }
+
+    @media only screen and (min-width: 1000px)
+    {
+        .Personal_Det_Con
+        {
+            margin-left: 150px;
+            display: flex;
+        }
+    }
+
+    .Per_Details h2
+    {
+        font-family: 'Inter', sans-serif; 
+        font-style: normal;
+        font-weight: 800;
+        font-size: 27px;
+        line-height: 33px;
+        color: #FFFFFF;
+    }
+
+    .Per_Details p
+    {
+        font-family: 'Inter', sans-serif; 
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        color: #888787;  
+        margin-top: -10px;
+        width: 80%;
+        text-align: justify;
+    }
+    .Per_Details
+    {
+        width: 80%;
+    }
+    .Info_Ele p
+    {
+        font-family: 'Inter', sans-serif; 
+        color: white;
+        margin-left: 50px;
+        margin-top:-34px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 29px;
+        color: #FFFFFF;
+    }
+    
+    .Info_Con
+    {
+        margin-right: 50px;
+    }
+   
+
+    @media only screen and (max-width: 1000px)
+    {
+
+        .Per_Details
+        {
+            width: 100%;
+        }
+
+        .Personal_Det_Con
+        {
+            margin-left: 50px;
+        }
+
+        .Per_Details p
+        {
+            font-size: 15px;
+        }
+
+        .Info_Con
+        {
+            margin-top: 20px;
+        }
+    }
